@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petrovenca - Pagina en Construcción</title>
+    <!-- Updated for deployment -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="particles"></div>
+    <div class="container">
+        <div class="content">
+            <div class="logo-container">
+                <img src="petrovenca grande1.png" alt="Petrovenca Logo" class="logo">
+            </div>
+            
+            <div class="main-content">
+                <h1 class="title">Página en Construcción</h1>
+                <p class="subtitle">Trabajando para brindarte la mejor experiencia</p>
+                
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <span class="progress-text">50% Completado</span>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+    <script>
+        // Simple particle animation
+        function createParticles() {
+            const particles = document.querySelector('.particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particles.appendChild(particle);
+            }
+        }
+        
+        // Progress bar animation
+        function animateProgress() {
+            const progressFill = document.querySelector('.progress-fill');
+            setTimeout(() => {
+                progressFill.style.width = '50%';
+            }, 500);
+        }
+        
+        // Initialize animations
+        window.addEventListener('load', () => {
+            createParticles();
+            animateProgress();
+        });
+    </script>
+</body>
+</html>
